@@ -117,8 +117,6 @@ while running:
         # elif event.type == pygame.KEYUP:
         #     player.speed = 0
 
-
-    screen.fill(PINK)
     screen.blit(background_img, [0, 0])
 
     for enemy in enemy_list:
@@ -126,6 +124,7 @@ while running:
         enemy.drop_box()
         if player.is_collided(enemy):
             game_score += 1
+            collide_sound.play()
 
 
     player.draw_box()
