@@ -76,9 +76,15 @@ font = pygame.font.SysFont('Calibri', 25, True, False)
 game_score = 0
 text = font.render(f"Score: {game_score}", True, WHITE)
 
-background_img = pygame.image.load("saturn_bg_image.jpg")
-player_img = pygame.image.load("space_ship.png")
-collide_sound = pygame.mixer.Sound("laser5.ogg")
+# images
+background_img = pygame.image.load("bg.png")
+# https://opengameart.org/content/backgrounds-3
+player_img = pygame.image.load("chicken_player.png")
+# https://opengameart.org/content/lpc-chicken-rework
+enemy_img = pygame.image.load("drumstick.png")
+# https://opengameart.org/content/64-16x16-food-sprites
+collide_sound = pygame.mixer.Sound("Chicken Sound Effect.ogg")
+# https://opengameart.org/content/chicken-sound-effect
 
 # create player
 player_width = 50
@@ -93,7 +99,7 @@ for i in range(10):
     x_coord = random.randrange(0, DISPLAY_WIDTH, 5)
     random_y = random.randrange(-100, 0, 5)
     print(random_y)
-    enemy_list.append(Box(screen, x_coord, random_y, enemy_width, enemy_width, WHITE, player_img))
+    enemy_list.append(Box(screen, x_coord, random_y, enemy_width, enemy_width, WHITE, enemy_img))
 
 
 running = True
