@@ -66,8 +66,6 @@ class Box:
             return True
 
 
-
-
 pygame.init()
 
 screen = pygame.display.set_mode((DISPLAY_WIDTH, DISPLAY_HEIGHT))
@@ -76,7 +74,7 @@ font = pygame.font.SysFont('Calibri', 25, True, False)
 game_score = 0
 text = font.render(f"Score: {game_score}", True, WHITE)
 
-# images
+# images w/ urls
 background_img = pygame.image.load("bg.png")
 # https://opengameart.org/content/backgrounds-3
 player_img = pygame.image.load("chicken_player.png")
